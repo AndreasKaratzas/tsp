@@ -136,11 +136,11 @@ The next images show sample outputs of the *ACS* algorithm for 10 cities:
 For the parallel implementations, using the Intel VTUNE profiler, the following results came up:
 
 * For the parallel implementation of the *Naive TSP*: <br/>
-![VTUNE Print Screen for Naive TSP](naive_tsp_vtune.png)
+![VTUNE Print Screen for Naive TSP](naive_tsp_vtune.PNG)
 * For the parallel implementation of the *Naive Heinritz - Hsiao*: <br/>
-![VTUNE Print Screen for Naive Heinritz - Hsiao](naive_hein_hs_vtune.png)
+![VTUNE Print Screen for Naive Heinritz - Hsiao](naive_hein_hs_vtune.PNG)
 * For the parallel implementation of the *ACS*: <br/>
-![VTUNE Print Screen for ACS](acs_vtune.png)
+![VTUNE Print Screen for ACS](acs_vtune.PNG)
 
 ## Research Stats
 
