@@ -2,7 +2,7 @@
 TARGET_EXEC := tsp
 
 BUILD_DIR := ./build
-SRC_DIRS := ./src
+SRC_DIRS := ./tsp
 
 # Find all the C and C++ files we want to compile
 SRCS := $(shell find $(SRC_DIRS) -name *.cpp)
