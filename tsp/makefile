@@ -1,6 +1,6 @@
 
 CC = g++
-CXXFLAGS = -Wall -lrt -O3 -fopt-info -fopenmp -march=native -std=c++17
+CXXFLAGS = -O3 -fopt-info -fopenmp -march=native -std=c++17
 
 tsp: Driver.o City.o Naive.o Common.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o
 	$(CC) $(CXXFLAGS) -o tsp Driver.o City.o Naive.o Common.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o
