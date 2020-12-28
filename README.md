@@ -159,3 +159,7 @@ However, with random data, the ACS shows better results regarding the cost funct
 ## Data Visualization
 
 To visualize the results and the progress of those algorithms, *[another](https://github.com/andreasceid/csv2networkx)* repository was created. Using that repository, the result data in `./data` project directory can be moved to the input directory of that project and monitor the algorithms' results. 
+
+## TODO
+
+Wrap compilation process into a makefile.
