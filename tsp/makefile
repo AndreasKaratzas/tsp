@@ -2,7 +2,7 @@
 CC = g++
 CXXFLAGS = -O3 -fopt-info -fopenmp -march=native -std=c++17
 
-tsp: Driver.o City.o Naive.o Common.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o
+tsp: Driver.o City.o Naive.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o Common.o
 	$(CC) $(CXXFLAGS) -o tsp Driver.o City.o Naive.o Common.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o
 
 Driver.o: Driver.cpp Driver.h City.h Naive.h Common.h Colonize.h Distance.h Interface.h Utilities.h Operation.h Pherormone.h Validation.h
