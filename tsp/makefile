@@ -1,13 +1,14 @@
 
 CC = g++
-CXXFLAGS = -O3 -fopt-info -fopenmp -march=native -std=c++17
+CXXFLAGS = -O3 -fopenmp -march=native -std=c++17
 
-tsp: Driver.o City.o Naive.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o
-	$(CC) $(CXXFLAGS) -o tsp Driver.o City.o Naive.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o
+tsp: Driver.o City.o Naive.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o Common.o
+	$(CC) $(CXXFLAGS) -o tsp Driver.o City.o Naive.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o Common.o
 
-Driver.o: Driver.cpp Driver.h City.h Naive.h Common.h Colonize.h Distance.h Interface.h Utilities.h Operation.h Pherormone.h Validation.h
+Driver.o: Driver.cpp Common.h Driver.h City.h Naive.h Common.h Colonize.h Distance.h Interface.h Utilities.h Operation.h Pherormone.h Validation.h
 	$(CC) $(CXXFLAGS) -c Driver.cpp
 
+Common.o: Common.h
 City.o: City.h Common.h
 Distance.o: Distance.h Common.h
 Interface.o: Interface.h Common.h
