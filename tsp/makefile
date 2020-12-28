@@ -8,7 +8,7 @@ tsp: Driver.o City.o Naive.o Distance.o Interface.o Utilities.o Operation.o Pher
 Driver.o: Driver.cpp Common.h Driver.h City.h Naive.h Common.h Colonize.h Distance.h Interface.h Utilities.h Operation.h Pherormone.h Validation.h
 	$(CC) $(CXXFLAGS) -c Driver.cpp
 
-Common.o: Common.h
+
 City.o: City.h Common.h
 Distance.o: Distance.h Common.h
 Interface.o: Interface.h Common.h
@@ -18,3 +18,4 @@ Validation.o: Validation.h Common.h
 Naive.o: Naive.h Common.h Operation.h
 Colonize.o: Colonize.h Common.h Naive.h Distance.h Operation.h
 Utilities.o: Utilities.h Common.h Distance.h Colonize.h Interface.h Pherormone.h Validation.h
+Common.o: Common.h
