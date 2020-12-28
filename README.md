@@ -118,7 +118,7 @@ There is also a parallel implementation for each of the first, the third and the
 * Change directory using `cd tsp/tsp`
 * [Optional] Make any desired changes in `Common.h` header file
 * Compile the project using `g++ Driver.cpp City.cpp Colonize.cpp Distance.cpp Interface.cpp Naive.cpp Operation.cpp Pherormone.cpp  Utilities.cpp Validation.cpp -o tsp -Wall -lrt -O3 -fopt-info -fopenmp -march=native -std=c++17`
-* Execute the project using `tsp`
+* Execute the project using `./tsp`
 
 ## Results
 
