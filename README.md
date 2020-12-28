@@ -153,6 +153,8 @@ Comparing the different algorithms with some fixed data, there were some interes
 | Naive Heinritz - Hsiao 	|            0.02859 seconds            	| 4000 (mean of 10 executions) 	|
 |           ACS          	|            0.07339 seconds            	| 3800 (mean of 10 executions) 	|
 
+However, with random data, the ACS shows better results regarding the cost function.
+
 ## Data Visualization
 
 To visualize the results and the progress of those algorithms, *[another](https://github.com/andreasceid/csv2networkx)* repository was created. Using that repository, the result data in `./data` project directory can be moved to the input directory of that project and monitor the algorithms' results. 
