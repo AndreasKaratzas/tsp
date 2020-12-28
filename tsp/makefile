@@ -1,22 +1,49 @@
+# Thanks to Job Vranish (https://spin.atomicobject.com/2016/08/26/makefile-c-projects/)
+TARGET_EXEC := tsp
 
-CC = g++
-CXXFLAGS = -O3 -fopenmp -march=native -std=c++17
+BUILD_DIR := ./build
+SRC_DIRS := ./src
 
-tsp: Driver.o
-	$(CC) $(CXXFLAGS) -o tsp Driver.o City.o Naive.o Common.o Colonize.o Distance.o Interface.o Utilities.o Operation.o Pherormone.o Validation.o
+# Find all the C and C++ files we want to compile
+SRCS := $(shell find $(SRC_DIRS) -name *.cpp)
 
-Driver.o: Driver.cpp Common.h Driver.h City.h Naive.h Common.h Colonize.h Distance.h Interface.h Utilities.h Operation.h Pherormone.h Validation.h
-	$(CC) $(CXXFLAGS) -c Driver.cpp
+# String substitution for every C/C++ file.
+# As an example, hello.cpp turns into ./build/hello.cpp.o
+OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 
-City.o: City.cpp City.h Common.h
-Distance.o: Distance.cpp Distance.h Common.h
-Interface.o: Interface.cpp Interface.h Common.h
-Operation.o: Operation.cpp Operation.h Common.h
-Pherormone.o: Pherormone.cpp Pherormone.h Common.h
-Validation.o: Validation.cpp Validation.h Common.h
-Naive.o: Naive.cpp Naive.h Operation.h Common.h
-Colonize.o: Colonize.cpp Colonize.h Common.h Naive.h Distance.h Operation.h
-Utilities.o: Utilities.cpp Utilities.h Common.h Distance.h Colonize.h Interface.h Pherormone.h Validation.h
+# String substitution (suffix version without %).
+# As an example, ./build/hello.cpp.o turns into ./build/hello.cpp.d
+DEPS := $(OBJS:.o=.d)
 
+# Every folder in ./src will need to be passed to GCC so that it can find header files
+INC_DIRS := $(shell find $(SRC_DIRS) -type d)
+# Add a prefix to INC_DIRS. So moduleA would become -ImoduleA. GCC understands this -I flag
+INC_FLAGS := $(addprefix -I,$(INC_DIRS))
+
+# The -MMD and -MP flags together generate Makefiles for us!
+# These files will have .d instead of .o as the output.
+CPPFLAGS := $(INC_FLAGS) -MMD -MP -O3 -fopenmp -march=native -std=c++17
+
+# The final build step.
+$(BUILD_DIR)/$(TARGET_EXEC): $(OBJS)
+    $(CC) $(OBJS) -o $@ $(LDFLAGS)
+
+# Build step for C source
+$(BUILD_DIR)/%.c.o: %.c
+    mkdir -p $(dir $@)
+    $(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+
+# Build step for C++ source
+$(BUILD_DIR)/%.cpp.o: %.cpp
+    mkdir -p $(dir $@)
+    $(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@
+
+
+.PHONY: clean
 clean:
-	rm *.o tsp
+    rm -r $(BUILD_DIR)
+
+# Include the .d makefiles. The - at the front suppresses the errors of missing
+# Makefiles. Initially, all the .d files will be missing, and we don't want those
+# errors to show up.
+-include $(DEPS)
