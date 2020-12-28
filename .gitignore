@@ -338,3 +338,20 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/tsp/My Advisor Results - tsp
+/tsp/VTune Profiler Results/tsp
+/tsp/par_random.cpp
+/tsp/tsp_naive-serial-release.cpp
+/tsp/tsp_naive-serial-debug.cpp
+/tsp/tsp_naive-parallel-release.cpp
+/tsp/tsp_naive-parallel-debug.cpp
+/tsp/tsp_knn-serial-release.cpp
+/tsp/tsp_knn-serial-debug.cpp
+/tsp/tsp_ant_colony-serial-release.cpp
+/tsp/tsp_ant_colony-serial-debug.cpp
+/tsp/tsp_ant_colony-parallel-release.cpp
+/tsp/tsp_ant_colony-parallel-debug.cpp
+/tsp/tsp_naive_knn-serial-release.cpp
+/tsp/tsp_naive_knn-serial-debug.cpp
+/tsp/tsp_naive_knn-parallel-release.cpp
+/tsp/tsp_naive_knn-parallel-debug.cpp
