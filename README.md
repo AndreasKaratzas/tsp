@@ -17,9 +17,11 @@ In this repository, the **Travelling Salesman Problem** or *TSP* is addressed wi
 <br/>
 <br/>
 <br/>
+
 ---
 ### 1. Naive TSP
 ---
+
 The first approach is a naive yet efficient approach: 
 
 > Consider a radnom TSP tour
