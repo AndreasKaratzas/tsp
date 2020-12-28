@@ -28,6 +28,7 @@
 #include <omp.h>                                            /// OpenMP Multiprocessing Programming Framework
 
 
+constexpr int FIXED_MODE = 0;                               /// This sets execution mode to `fixed mode` where the dataset is fixed
 constexpr int TEST_MODE = 1;                                /// If 0 then the algorithm runs in debug mode, 
                                                             /// meaning less `N_POINTS` (cities), iterations 
                                                             /// and more verbosity. If 1 then the algorithm 
@@ -71,3 +72,17 @@ constexpr int ROULETTE_SIZE = (TEST_MODE == 1 ? 3 : 4);     /// This the size of
                                                             /// size of the ant memory. The math for this variable is that is has to be less than `N_POINTS` minus `ANT_MEMORY`.
 constexpr double RHO = 0.1;                                 /// This is the vaporazation ratio for the ACS.
 constexpr int CHUNK = (int)(4 * (N_POINTS / N_ANTS));       /// Sets chunk size for OpenMP loop
+
+constexpr std::array<std::pair<int, int>, N_POINTS> FIXED_DATASET = {
+    std::make_pair(42, 53),
+    std::make_pair(364, 45),
+    std::make_pair(84, 212),
+    std::make_pair(67, 865),
+    std::make_pair(145, 1),
+    std::make_pair(875, 52),
+    std::make_pair(764, 899),
+    std::make_pair(193, 63),
+    std::make_pair(2, 754),
+    std::make_pair(263, 631)
+};                                                          /// This vector is the initializer of the dataset if 
+                                                            /// the programmer wishes to compare the TSP approaches with a fixed dataset

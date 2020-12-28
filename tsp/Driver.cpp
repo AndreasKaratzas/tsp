@@ -9,7 +9,8 @@
 int main(void)
 {
     std::array<std::pair<int, int>, N_POINTS> cities;                                                                   /// Declares a vector to store the dataset 
-    initialize_cities(cities);                                                                                          /// Initializes the dataset with random points
+    if (FIXED_MODE) { set_fixed_dataset(cities); }                                                                      /// If in FIXED_MODE fix - initialize the dataset 
+    else { initialize_cities(cities); }                                                                                 /// Else initialize the dataset with random points
     std::string algorithm;                                                                                              /// Declares a string to associate it with the algorithm running
     std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();                        /// Declares a starting time point which helps in benchmarking
     switch (ALGORITHM)                                                                                                  /// Depending on the algorithm selected by the user call the appropriate routine
