@@ -115,10 +115,10 @@ There is also a parallel implementation for each of the first, the third and the
 
 * Open a terminal
 * Clone the repository `git clone https://github.com/andreasceid/tsp.git`
-* Change directory using `cd tsp`
+* Change directory using `cd ./tsp/tsp`
 * [Optional] Make any desired changes in `Common.h` header file
 * Compile the project using `make`
-* Execute the project using `./tsp`
+* Execute the project using `tsp`
 
 ## Results
 
