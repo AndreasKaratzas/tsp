@@ -14,6 +14,37 @@ In this repository, the **Travelling Salesman Problem** or *TSP* is addressed wi
 |       Extra Frameworks 	| OpenMP 4.0                               	|
 |              Processor 	| Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz 	|
 |                    RAM 	| 16 GB 2667 MHz                           	|
+
+## Notes
+
+There is also a parallel implementation for each of the first, the third and the fourth approach using OpenMP 4.0. 
+
+## Installation
+
+* Open a terminal
+* Clone the repository `git clone https://github.com/andreasceid/tsp.git`
+* Change directory using `cd tsp/`
+* [Optional] Make any desired changes in `Common.h` header file
+* Compile the project using `make`
+* Change to build directory using `cd build/`
+* Execute the project using `./lab-3_tsp`
+
+## Research Stats
+
+Comparing the different algorithms with some fixed data, there were some interesting results attached below:
+
+|        Algorithm       	| Performance (10 cities fixed dataset) 	|         TSP tour cost        	|
+|:----------------------:	|:-------------------------------------:	|:----------------------------:	|
+|        Naive TSP       	|            0.02773 seconds            	| 4500 (mean of 10 executions) 	|
+|    Heinritz - Hsiao    	|            0.04765 seconds            	|           3116.622           	|
+| Naive Heinritz - Hsiao 	|            0.02859 seconds            	| 4000 (mean of 10 executions) 	|
+|           ACS          	|            0.07339 seconds            	| 3800 (mean of 10 executions) 	|
+
+However, with random data, the ACS shows better results regarding the cost function.
+
+## Data Visualization
+
+To visualize the results and the progress of those algorithms, *[another](https://github.com/andreasceid/csv2networkx)* repository was created. Using that repository, the result data in `./data` project directory can be moved to the input directory of that project and monitor the algorithms' results. 
 <br/>
 
 ---
@@ -97,21 +128,7 @@ The fourth and final approach uses the *Ant Colony Optimization* algorithm:
 > Pick the best edge based on the `pherormone matrix` and make a TSP tour
 
 ---
-## Notes
-
-There is also a parallel implementation for each of the first, the third and the fourth approach using OpenMP 4.0. 
-
-## Installation
-
-* Open a terminal
-* Clone the repository `git clone https://github.com/andreasceid/tsp.git`
-* Change directory using `cd tsp/`
-* [Optional] Make any desired changes in `Common.h` header file
-* Compile the project using `make`
-* Change to build directory using `cd build/`
-* Execute the project using `./lab-3_tsp`
-
-## Results
+## Demo
 
 The GIF below is illustrates the progress of the *Naive TSP* algorithm approach for 10 cities:
 
@@ -132,20 +149,3 @@ For the parallel implementations, using the Intel VTUNE profiler, the following 
 ![VTUNE Print Screen for Naive Heinritz - Hsiao](naive_hein_hs_vtune.PNG)
 * For the parallel implementation of the *ACS*: <br/>
 ![VTUNE Print Screen for ACS](acs_vtune.PNG)
-
-## Research Stats
-
-Comparing the different algorithms with some fixed data, there were some interesting results attached below:
-
-|        Algorithm       	| Performance (10 cities fixed dataset) 	|         TSP tour cost        	|
-|:----------------------:	|:-------------------------------------:	|:----------------------------:	|
-|        Naive TSP       	|            0.02773 seconds            	| 4500 (mean of 10 executions) 	|
-|    Heinritz - Hsiao    	|            0.04765 seconds            	|           3116.622           	|
-| Naive Heinritz - Hsiao 	|            0.02859 seconds            	| 4000 (mean of 10 executions) 	|
-|           ACS          	|            0.07339 seconds            	| 3800 (mean of 10 executions) 	|
-
-However, with random data, the ACS shows better results regarding the cost function.
-
-## Data Visualization
-
-To visualize the results and the progress of those algorithms, *[another](https://github.com/andreasceid/csv2networkx)* repository was created. Using that repository, the result data in `./data` project directory can be moved to the input directory of that project and monitor the algorithms' results. 
