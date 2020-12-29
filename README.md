@@ -15,8 +15,6 @@ In this repository, the **Travelling Salesman Problem** or *TSP* is addressed wi
 |              Processor 	| Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz 	|
 |                    RAM 	| 16 GB 2667 MHz                           	|
 <br/>
-<br/>
-<br/>
 
 ---
 ### 1. Naive TSP
@@ -38,8 +36,6 @@ The first approach is a naive yet efficient approach:
 >>> Permutate those cities to their initial order
 >
 > Until all cities are explored 
-<br/>
-<br/>
 
 ---
 ### 2. Heinritz - Hsiao
@@ -54,8 +50,6 @@ The second approach is an implementation of the *Heinritz - Hsiao* algorithm:
 >> Update the path
 >>
 > Until all cities have been explored
-<br/>
-<br/>
 
 ---
 ### 3. Naive Heinritz - Hsiao
@@ -74,8 +68,6 @@ The third implementation is a variation of the above algorithm:
 >> Update the path
 >>
 > Until all cities have been explored
-<br/>
-<br/>
 
 ---
 ### 4. Ant Colony Optimization
@@ -103,8 +95,6 @@ The fourth and final approach uses the *Ant Colony Optimization* algorithm:
 > Until `M` number of iterations have been completed
 >
 > Pick the best edge based on the `pherormone matrix` and make a TSP tour
-<br/>
-<br/>
 
 ---
 ## Notes
