@@ -105,11 +105,11 @@ There is also a parallel implementation for each of the first, the third and the
 
 * Open a terminal
 * Clone the repository `git clone https://github.com/andreasceid/tsp.git`
-* Change directory using `cd tsp/tsp`
+* Change directory using `cd tsp/`
 * [Optional] Make any desired changes in `Common.h` header file
-* Compile the project using `g++ Driver.cpp City.cpp Colonize.cpp Distance.cpp Interface.cpp Naive.cpp Operation.cpp Pherormone.cpp  Utilities.cpp Validation.cpp -o tsp -Wall -lrt -O3 -fopt-info -fopenmp -march=native -std=c++17`
-* Remove all redundant files that were created while compiling the project using `rm -rf *.o or *.d`
-* Execute the project using `./tsp`
+* Compile the project using `make`
+* Change to build directory using `cd build/`
+* Execute the project using `./lab-3_tsp`
 
 ## Results
 
@@ -149,7 +149,3 @@ However, with random data, the ACS shows better results regarding the cost funct
 ## Data Visualization
 
 To visualize the results and the progress of those algorithms, *[another](https://github.com/andreasceid/csv2networkx)* repository was created. Using that repository, the result data in `./data` project directory can be moved to the input directory of that project and monitor the algorithms' results. 
-
-## TODO
-
-Wrap compilation process into a makefile.
