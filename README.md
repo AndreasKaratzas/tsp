@@ -46,6 +46,17 @@ However, with random data, the ACS shows better results regarding the cost funct
 
 To visualize the results and the progress of those algorithms, *[another](https://github.com/andreasceid/csv2networkx)* repository was created. Using that repository, the result data in `./data` project directory can be moved to the input directory of that project and monitor the algorithms' results. 
 
+## Effective parallelism
+
+For the parallel implementations, using the Intel VTUNE profiler, the following results came up:
+
+* For the parallel implementation of the *Naive TSP*: 
+    > [98% effective core utilization](naive_tsp_vtune.PNG) with 10000 cities sample
+* For the parallel implementation of the *Naive Heinritz - Hsiao*:
+    > [98.5% effective core utilization](naive_hein_hs_vtune.PNG) with 100000 cities sample
+* For the parallel implementation of the *ACS*:
+    > [95.3% effective core utilization](acs_vtune.PNG) with 1000 cities sample
+
 ## Demo
 
 The GIF below is illustrates the progress of the *Naive TSP* algorithm approach for 10 cities:
@@ -56,14 +67,6 @@ The next images show sample outputs of the *ACS* algorithm for 10 cities:
 
 ![Demo](acs_1.png)
 ![Demo](acs_2.png)
-
-## Effective parallelism
-
-For the parallel implementations, using the Intel VTUNE profiler, the following results came up:
-
-* For the parallel implementation of the *Naive TSP*: [98% effective core utilization](naive_tsp_vtune.PNG) with 10000 cities sample
-* For the parallel implementation of the *Naive Heinritz - Hsiao*: [98.5% effective core utilization](naive_hein_hs_vtune.PNG) with 100000 cities sample
-* For the parallel implementation of the *ACS*: [95.3% effective core utilization](acs_vtune.PNG) with 1000 cities sample
 
 ## Algorithm Description
 
