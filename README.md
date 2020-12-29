@@ -25,6 +25,7 @@ There is also a parallel implementation for each of the first, the third and the
 * Clone the repository `git clone https://github.com/andreasceid/tsp.git`
 * Change directory using `cd tsp/`
 * (Optional) Make any kind of changes in `Common.h` to change the executable settings
+* (Optional) Add Optimization report to the makefile by adding $(COMPILE_INF) where that is necessary
 * Compile the project using `make`
 * Change to build directory using `cd build/`
 * Execute the project using `./lab-3_tsp`
