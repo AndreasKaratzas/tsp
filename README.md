@@ -5,7 +5,7 @@
 In this repository, the **Travelling Salesman Problem** or *TSP* is addressed with a variety of approaches. 
 <br/>
 <br/>
-| Project Specifications 	|                                          	|
+| System Specifications 	|                                          	|
 |------------------------	|------------------------------------------	|
 |                    IDE 	| Visual Studio 2019 Version 16.7.2        	|
 |   Programming Language 	| C++ 17                                   	|
