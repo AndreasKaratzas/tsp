@@ -28,6 +28,7 @@ There is also a parallel implementation for each of the first, the third and the
 * (Optional) Add Optimization report to the makefile by adding $(COMPILE_INF) where that is necessary
 * Compile the project using `make`
 * Change to build directory using `cd build/`
+* Create output data directory using `mkdir data`
 * Execute the project using `./lab-3_tsp`
 
 ## Research Stats
