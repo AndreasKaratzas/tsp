@@ -45,7 +45,30 @@ However, with random data, the ACS shows better results regarding the cost funct
 ## Data Visualization
 
 To visualize the results and the progress of those algorithms, *[another](https://github.com/andreasceid/csv2networkx)* repository was created. Using that repository, the result data in `./data` project directory can be moved to the input directory of that project and monitor the algorithms' results. 
-<br/>
+
+## Demo
+
+The GIF below is illustrates the progress of the *Naive TSP* algorithm approach for 10 cities:
+
+![Demo](tsp.gif)
+
+The next images show sample outputs of the *ACS* algorithm for 10 cities:
+
+![Demo](acs_1.png)
+![Demo](acs_2.png)
+
+## Performance
+
+For the parallel implementations, using the Intel VTUNE profiler, the following results came up:
+
+* For the parallel implementation of the *Naive TSP*: <br/>
+![VTUNE Print Screen for Naive TSP](naive_tsp_vtune.PNG)
+* For the parallel implementation of the *Naive Heinritz - Hsiao*: <br/>
+![VTUNE Print Screen for Naive Heinritz - Hsiao](naive_hein_hs_vtune.PNG)
+* For the parallel implementation of the *ACS*: <br/>
+![VTUNE Print Screen for ACS](acs_vtune.PNG)
+
+## Algorithm Description
 
 ---
 ### 1. Naive TSP
@@ -128,24 +151,3 @@ The fourth and final approach uses the *Ant Colony Optimization* algorithm:
 > Pick the best edge based on the `pherormone matrix` and make a TSP tour
 
 ---
-## Demo
-
-The GIF below is illustrates the progress of the *Naive TSP* algorithm approach for 10 cities:
-
-![Demo](tsp.gif)
-
-The next images show sample outputs of the *ACS* algorithm for 10 cities:
-
-![Demo](acs_1.png)
-![Demo](acs_2.png)
-
-## Performance
-
-For the parallel implementations, using the Intel VTUNE profiler, the following results came up:
-
-* For the parallel implementation of the *Naive TSP*: <br/>
-![VTUNE Print Screen for Naive TSP](naive_tsp_vtune.PNG)
-* For the parallel implementation of the *Naive Heinritz - Hsiao*: <br/>
-![VTUNE Print Screen for Naive Heinritz - Hsiao](naive_hein_hs_vtune.PNG)
-* For the parallel implementation of the *ACS*: <br/>
-![VTUNE Print Screen for ACS](acs_vtune.PNG)
