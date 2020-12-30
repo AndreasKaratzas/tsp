@@ -120,10 +120,10 @@ void naive_tsp_parallel(std::array<std::pair<int, int>, N_POINTS>& cities)
                 cities.at(point_index_two + 1));
             if (diff_before > diff_after)
             {
-#pragma omp critical
+                std::swap(cities.at(point_index_two), cities.at(point_index_one));
+                if (TEST_MODE)
                 {
-                    std::swap(cities.at(point_index_two), cities.at(point_index_one));
-                    if (TEST_MODE)
+#pragma omp critical
                     {
                         print_tsp_tour_cost(tsp_tour_cost(cities));
                         export_graph_newtork_array(cities, "graph" + std::to_string(i));

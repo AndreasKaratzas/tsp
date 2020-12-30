@@ -29,11 +29,11 @@
 
 
 constexpr int FIXED_MODE = 0;                               /// This sets execution mode to `fixed mode` where the dataset is fixed
-constexpr int TEST_MODE = 1;                                /// If 0 then the algorithm runs in debug mode, 
+constexpr int TEST_MODE = 0;                                /// If 0 then the algorithm runs in debug mode, 
                                                             /// meaning less `N_POINTS` (cities), iterations 
                                                             /// and more verbosity. If 1 then the algorithm 
                                                             /// runs in release mode.
-constexpr int ALGORITHM = 0;                                /// If 0 then the algorithm running is the `Naive TSP`, as described in `Utilities.cpp`
+constexpr int ALGORITHM = 1;                                /// If 0 then the algorithm running is the `Naive TSP`, as described in `Utilities.cpp`
                                                             /// If 1 then the algorithm running is the `Naive TSP` (Parallel Implementation), as described in `Utilities.cpp`
                                                             /// If 2 then the algorithm running is the `TSP with nearest neighbor`, as described in `Utilities.cpp`
                                                             /// If 3 then the algorithm running is the `TSP with naive nearest neighbor`, as described in `Utilities.cpp`
@@ -71,7 +71,7 @@ constexpr int ROULETTE_SIZE = (TEST_MODE == 1 ? 3 : 4);     /// This the size of
                                                             /// paths the ant can follow. This variable must be changed with respect to the total number of points and to the 
                                                             /// size of the ant memory. The math for this variable is that is has to be less than `N_POINTS` minus `ANT_MEMORY`.
 constexpr double RHO = 0.1;                                 /// This is the vaporazation ratio for the ACS.
-constexpr int CHUNK = (int)(4 * (N_POINTS / N_ANTS));       /// Sets chunk size for OpenMP loop
+constexpr int CHUNK = (int)(4 * (N_POINTS / N_ANTS)) + 1;   /// Sets chunk size for OpenMP loop
 
 constexpr std::array<std::pair<int, int>, N_POINTS> FIXED_DATASET = {
     std::make_pair(42, 53),
