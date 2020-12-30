@@ -15,10 +15,6 @@ In this repository, the **Travelling Salesman Problem** or *TSP* is addressed wi
 |              Processor 	| Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz 	|
 |                    RAM 	| 16 GB 2667 MHz                           	|
 
-## Notes
-
-There is also a parallel implementation for each of the first, the third and the fourth approach using OpenMP 4.0. 
-
 ## Installation
 
 * Open a terminal
@@ -153,3 +149,7 @@ The fourth and final approach uses the *Ant Colony Optimization* algorithm:
 > Pick the best edge based on the `pherormone matrix` and make a TSP tour
 
 ---
+
+## Notes
+
+There is also a parallel implementation for each of the first, the third and the fourth approach using OpenMP 4.0. 
