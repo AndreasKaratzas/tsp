@@ -1,8 +1,8 @@
-# Travelling Salesman Problem
+# Traveling Salesman Problem
 
 ## Description
 
-In this repository, the **Travelling Salesman Problem** or *TSP* is addressed with a variety of approaches. 
+In this repository, the **Traveling Salesman Problem** or *TSP* is addressed with a variety of approaches. 
 <br/>
 <br/>
 | System Specifications 	|                                          	|
@@ -94,7 +94,7 @@ The first approach is a naive yet efficient approach:
 ---
 The second approach is an implementation of the *Heinritz - Hsiao* algorithm:
 
-> Place the travelling salesman on a city
+> Place the traveling salesman on a city
 >
 > Repeat:
 >> Select the closest city
@@ -108,7 +108,7 @@ The second approach is an implementation of the *Heinritz - Hsiao* algorithm:
 ---
 The third implementation is a variation of the above algorithm:
 
-> Place the travelling salesman on a city
+> Place the traveling salesman on a city
 >
 > Repeat:
 >> Find the closest city
