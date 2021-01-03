@@ -163,4 +163,4 @@ The fourth and final approach uses the *Ant Colony Optimization* algorithm:
 
 ## Notes
 
-There is also a parallel implementation for each of the first, the third and the fourth approach using OpenMP 4.0. 
+There is also a parallel implementation for each of the first, the third and the fourth approach using OpenMP 4.0. Finally, there is a [project report](parallel-programming-lab-3.pdf) in Greek.
