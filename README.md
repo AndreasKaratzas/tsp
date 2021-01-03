@@ -20,10 +20,23 @@ In this repository, the **Traveling Salesman Problem** or *TSP* is addressed wit
 * Open a terminal
 * Clone the repository `git clone https://github.com/andreasceid/tsp.git`
 * Change directory using `cd tsp/`
-* (Optional) Make any kind of changes in `Common.h` to change the executable settings
-* (Optional) Add Optimization report to the makefile by adding $(COMPILE_INF) where that is necessary
 * Compile the project using `make`
 * Execute the project using `make run`
+
+To rebuild the project, use `make clean` first and then execute `make` and `make run`.
+
+## Structure
+
+* In `Common.h` the developer can access any settings regarding the progress, such as the number of threads that the executable is to request or the *type of algorithm* it's going to execute
+* In `Driver.cpp` files the developer can inspect the `main` function of the project
+* In `Utilities.cpp` the developer can inspect the functions called uppon the different algorithms
+* In `Colonize.cpp` the developer can inspect the main body of the *ACS* implementation
+* In `Operation.cpp` there are some *helper functions*
+* In `Validation.cpp` there are some functions that perform *data extraction*
+* In `Interface.cpp` there are some functions that output in CLI form some feedback to the developer
+* In `Naive.cpp` there is a custom implementation of the *Roulette Wheel Selection* algorithm
+* In `City.cpp` and `Pherormone.cpp` there are *random initializers* to generate the required *datasets*
+* In `Diastance.cpp` there are functions that help with the computation of the *cost functions* in each of the implemented algorithms
 
 ## Research Stats
 
