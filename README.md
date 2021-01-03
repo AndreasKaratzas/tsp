@@ -23,9 +23,7 @@ In this repository, the **Traveling Salesman Problem** or *TSP* is addressed wit
 * (Optional) Make any kind of changes in `Common.h` to change the executable settings
 * (Optional) Add Optimization report to the makefile by adding $(COMPILE_INF) where that is necessary
 * Compile the project using `make`
-* Change to build directory using `cd build/`
-* Create output data directory using `mkdir data`
-* Execute the project using `./lab-3_tsp`
+* Execute the project using `make run`
 
 ## Research Stats
 
