@@ -27,7 +27,7 @@ To rebuild the project, use `make clean` first and then execute `make` and `make
 
 ## Structure
 
-* In `Common.h` the developer can access any settings regarding the progress, such as the number of threads that the executable is to request or the *type of algorithm* it's going to execute
+* In `Common.h` the developer can access all the project settings, such as the number of *the requested threads* or *the algorithm* to execute
 * In `Driver.cpp` files the developer can inspect the `main` function of the project
 * In `Utilities.cpp` the developer can inspect the functions called uppon the different algorithms
 * In `Colonize.cpp` the developer can inspect the main body of the *ACS* implementation
