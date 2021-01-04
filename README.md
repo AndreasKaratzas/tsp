@@ -36,7 +36,7 @@ To rebuild the project, use `make clean` first and then execute `make` and `make
 * In `Interface.cpp` there are some functions that output in CLI form some feedback to the developer
 * In `Naive.cpp` there is a custom implementation of the *Roulette Wheel Selection* algorithm
 * In `City.cpp` and `Pherormone.cpp` there are *random initializers* to generate the required *datasets*
-* In `Diastance.cpp` there are functions that help with the computation of the *cost functions* in each of the implemented algorithms
+* In `Distance.cpp` there are functions that help with the computation of the *cost functions* in each of the implemented algorithms
 
 ## Research Stats
 
