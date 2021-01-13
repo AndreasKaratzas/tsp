@@ -11,7 +11,7 @@ In this repository, the **Traveling Salesman Problem** or *TSP* is addressed wit
 |   Programming Language 	| C++ 17                                   	|
 |       Operating System 	| Windows 10                               	|
 |               Compiler 	| Intel Compiler 19.1                      	|
-|       Extra Frameworks 	| OpenMP 4.0                               	|
+|       Extra Frameworks 	| OpenMP 5.1                               	|
 |              Processor 	| Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz 	|
 |                    RAM 	| 16 GB 2667 MHz                           	|
 
