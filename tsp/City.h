@@ -2,7 +2,7 @@
 /**
  * City.h
  * 
- * In this header file, we define some function that are executed
+ * In this header file, we define some functions that are executed
  * only in the beginning of the program. These functions are used
  * either to generate a random set or to set the dataset to a
  * fixed state of points that will play the role of the cities
